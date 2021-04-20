@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:300,500");
+
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #4b0082;
+  color: white;
+}
+
+/* FireBaseData _________________________________________*/
+.FireBaseDatah1 {
+  font-weight: bold;
+  font-size: 125px;
+  color: yellow;
+}
+
+/* NavbarLift ___________________________________________*/
+.NavbarLiftRow {
+  background-color: #441e59;
+  text-align: center;
+  margin-top: 5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.NavbarLifth1 {
+  font-weight: bold;
+  color: yellow;
+}
+
+.NavbarLifth3 {
+  font-weight: bold;
+}
+
+/* AantalGebruikLift ____________________________________*/
+
+.AantalGebruikLiftRow {
+  margin-top: 3rem;
+}
+
+.AantalGebruiktLifCol1 {
+  padding: 1rem 0rem 1rem 0rem;
+  margin-right: 1rem;
+  background-color: #25133f;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruikLiftImage1 {
+  margin-bottom: 1rem;
+}
+
+.AantalGebruiktLifCol2 {
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: #43256b;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol3 {
+  padding: 1rem 0rem 1rem 0rem;
+  margin-left: 1rem;
+  background-color: #663988;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* GrafiekGebruikLift ____________________________________*/
+
+.GrafiekGebruikLiftRow {
+  margin-top: 3rem;
+}
+
+.GrafiekGebruikLiftCol1 {
+  padding: 7rem 1rem 7rem 1rem;
+  background-color: #43256b;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.GrafiekGebruikLiftCol2 {
+  padding: 7rem 1rem 7rem 1rem;
+  background-color: #25133f;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
