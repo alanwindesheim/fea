@@ -6,15 +6,15 @@ import "./css/index.css";
 
 // components
 import NavbarLift from "./components/NavbarLift";
-import AantalGebruikLift from "./components/AantalGebruikLift";
-import GrafiekGebruikLift from "./components/GrafiekGebruikLift";
+import FirebaseData from "./components/FirebaseData";
+import GebruikLiftSliderQR from "./components/GebruikLiftSliderQR";
 
 const App = () => {
   return (
     <section>
       <NavbarLift />
-      <AantalGebruikLift />
-      <GrafiekGebruikLift />
+      <FirebaseData />
+      <GebruikLiftSliderQR />
     </section>
   );
 };

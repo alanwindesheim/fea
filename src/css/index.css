@@ -10,36 +10,15 @@ body {
 }
 
 /* FireBaseData _________________________________________*/
-.FireBaseDatah1 {
+.FireBaseDataH1 {
   font-weight: bold;
   font-size: 125px;
   color: yellow;
 }
 
-/* NavbarLift ___________________________________________*/
-.NavbarLiftRow {
-  background-color: #441e59;
-  text-align: center;
-  margin-top: 5rem;
-  padding: 0.5rem 0rem 0.5rem 0rem;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-    0 16px 16px rgba(0, 0, 0, 0.12);
-}
-
-.NavbarLifth1 {
-  font-weight: bold;
-  color: yellow;
-}
-
-.NavbarLifth3 {
-  font-weight: bold;
-}
-
 /* AantalGebruikLift ____________________________________*/
-
 .AantalGebruikLiftRow {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .AantalGebruiktLifCol1 {
@@ -75,14 +54,33 @@ body {
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* GrafiekGebruikLift ____________________________________*/
-
-.GrafiekGebruikLiftRow {
+/* NavbarLift ___________________________________________*/
+.NavbarLiftRow {
+  background-color: #441e59;
+  text-align: center;
   margin-top: 3rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.NavbarLifth1 {
+  font-weight: bold;
+  color: yellow;
+}
+
+.NavbarLifth3 {
+  font-weight: bold;
+}
+
+/* GrafiekGebruikLift ____________________________________*/
+.GrafiekGebruikLiftRow {
+  margin-top: 2rem;
 }
 
 .GrafiekGebruikLiftCol1 {
-  padding: 7rem 1rem 7rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   background-color: #43256b;
   text-align: center;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
@@ -91,10 +89,45 @@ body {
 }
 
 .GrafiekGebruikLiftCol2 {
-  padding: 7rem 1rem 7rem 1rem;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
   background-color: #25133f;
   text-align: center;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 16px 16px rgba(0, 0, 0, 0.12);
+}
+.sliderTitle {
+  font-weight: bold;
+}
+.sliderText {
+  color: yellow;
+  font-weight: bold;
+}
+
+.sliderTextWhite {
+  color: white;
+}
+
+.qrCodeImage {
+  width: 180px;
+  height: 180px;
+}
+
+.qrCodeTitle {
+  color: yellow;
+  font-weight: bold;
+}
+
+/* Mobile Screen  ___________________________*/
+@media only screen and (max-width: 991px) {
+  .FireBaseDataH1 {
+    font-size: 75px;
+  }
+  .AantalGebruikLiftImage1 {
+    height: 75px;
+    width: 75px;
+  }
+  .AantalGebruiktH2 {
+    font-size: 30px;
+  }
 }
