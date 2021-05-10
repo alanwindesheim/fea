@@ -25,8 +25,10 @@ class FirebaseData extends Component {
       });
     });
   }
-
+  
   render() {
+    var g = (this.state.users * 0.09).toFixed(2);
+    var value = parseFloat(g).toFixed(2);
     return (
       <div>
         <Container>
@@ -40,12 +42,12 @@ class FirebaseData extends Component {
               </h2>
             </Col>
             <Col className="AantalGebruiktLifCol2">
-              <h1 className="FireBaseDataH1">{this.state.users * 0}</h1>
+              <h1 className="FireBaseDataH1">{value}</h1>
               <img src={co2} className="AantalGebruikLiftImage1" alt="" />
               <h2>zoveel kilo CO2 uitstoot is er vandaag door de lift</h2>
             </Col>
             <Col className="AantalGebruiktLifCol3">
-              <h1 className="FireBaseDataH1">{this.state.users * 0}</h1>
+              <h1 className="FireBaseDataH1">{(this.state.users * 0.02) * 1.25}</h1>
               <img src={burger} className="AantalGebruikLiftImage1" alt="" />
               <h2 className="AantalGebruiktH2">
                 Euros in Hamburgers omzetten gegevens hier
