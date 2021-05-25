@@ -18,7 +18,7 @@ body {
 
 /* AantalGebruikLift ____________________________________*/
 .AantalGebruikLiftRow {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .AantalGebruiktLifCol1 {
@@ -58,7 +58,7 @@ body {
 .NavbarLiftRow {
   background-color: #441e59;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
   padding: 0.5rem 0rem 0.5rem 0rem;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
@@ -76,7 +76,7 @@ body {
 
 /* GrafiekGebruikLift ____________________________________*/
 .GrafiekGebruikLiftRow {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .GrafiekGebruikLiftCol1 {
@@ -114,20 +114,26 @@ body {
 }
 
 .qrCodeTitle {
+  margin-bottom: 2rem;
   color: yellow;
   font-weight: bold;
 }
 
 /* Mobile Screen  ___________________________*/
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 591px) {
   .FireBaseDataH1 {
-    font-size: 75px;
+    font-size: 35px;
   }
   .AantalGebruikLiftImage1 {
-    height: 75px;
-    width: 75px;
+    height: 35px;
+    width: 35px;
   }
+
   .AantalGebruiktH2 {
     font-size: 30px;
+  }
+
+  .AantalGebruiktLifCol3 {
+    margin-left: 0rem;
   }
 }
