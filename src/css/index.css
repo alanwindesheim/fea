@@ -16,6 +16,25 @@ body {
   color: yellow;
 }
 
+/* NavbarLift SLIDE 1 EN SLIDE 2 _________________________*/
+.NavbarLiftRow {
+  background-color: #441e59;
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.NavbarLifth1 {
+  font-weight: bold;
+  color: yellow;
+}
+.NavbarLifth3 {
+  font-weight: bold;
+}
+
 /* AantalGebruikLift ____________________________________*/
 .AantalGebruikLiftRow {
   margin-top: 1rem;
@@ -35,7 +54,6 @@ body {
   margin-bottom: 1rem;
   height: 150px;
   width: 150px;
-
 }
 
 .AantalGebruiktLifCol2 {
@@ -57,91 +75,61 @@ body {
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* NavbarLift ___________________________________________*/
-.NavbarLiftRow {
-  background-color: #441e59;
-  text-align: center;
-  margin-top: 2.5rem;
-  padding: 0.5rem 0rem 0.5rem 0rem;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-    0 16px 16px rgba(0, 0, 0, 0.12);
-}
-
-.NavbarLifth1 {
-  font-weight: bold;
-  color: yellow;
-} 
-.NavbarLifth3 {
-  font-weight: bold;
-}
 /* GrafiekGebruikLift ____________________________________*/
 .GrafiekGebruikLiftRow {
   margin-top: 1rem;
 }
-#txtunder{
-  margin: auto !important;
-  display: block;
-}
-.navbarlefttop {
-  text-align: left;
-  font-weight: bold;
-}
-
-.navbarleftbottom {
-  text-align: left;
-  font-weight: bold;
-  bottom: 0
-}
-
-#greentext{
-  color:yellow;
-}
-#redtext{
-  color: red
-}
-
 .GrafiekGebruikLiftCol1 {
   padding: 1rem 1rem 1rem 1rem;
   background-color: #43256b;
   text-align: center;
+  border-left: 3px solid #4b0082;
+  border-right: 3px solid #4b0082;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.GrafiekGebruikLiftH2Text1 {
+  margin-top: 3rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+#GrafiekGebruikLiftH2Text1Kleur {
+  color: yellow;
+  font-weight: bold;
+}
+
+.GrafiekGebruikLiftCol1Streep {
+  border-bottom: 3px white solid;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.GrafiekGebruikLiftH2Text2 {
+  text-align: left;
+  font-weight: bold;
+  bottom: 0;
+}
+
+#GrafiekGebruikLiftH2Text2Kleur {
+  color: red;
+  font-weight: bold;
 }
 
 .GrafiekGebruikLiftCol2 {
   padding: 0.5rem 0.5rem 1rem 0.5rem;
-  background-color: #25133f;
+  background-color: #663988;
   text-align: center;
+  border-left: 3px solid #4b0082;
+  border-right: 3px solid #4b0082;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
-.sliderTitle {
-  font-weight: bold;
-}
-.sliderText {
-  color: yellow;
-  font-weight: bold;
-}
 
-.sliderTextWhite {
-  color: white;
-}
-
-.qrCodeImage {
-  width: 180px;
-  height: 180px;
-}
-
-.qrCodeTitle {
-  margin-bottom: 2rem;
-  color: yellow;
-  font-weight: bold;
-}
-
-/* Mobile Screen  ___________________________*/
+/* Mobile Screen Responsive , nog in proces en niet af momenteel _____*/
 @media only screen and (max-width: 591px) {
   .FireBaseDataH1 {
     font-size: 35px;
@@ -157,5 +145,11 @@ body {
 
   .AantalGebruiktLifCol3 {
     margin-left: 0rem;
+  }
+
+  .navbarlefttop {
+    margin-top: 0rem;
+    text-align: left;
+    font-weight: bold;
   }
 }
