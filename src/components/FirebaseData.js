@@ -12,9 +12,8 @@ import charger from "../images/charge.png";
 class FirebaseData extends Component {
   constructor(props) {
     super(props);
-
     this.app = firebase.initializeApp(DB_CONFIG);
-    this.database = this.app.database().ref().child("Aantal_Lift_Gebruikers");
+    this.database = this.app.database().ref().child("leeg");
     this.state = {
       users: 0,
     };
@@ -110,7 +109,7 @@ class FirebaseData extends Component {
               </h2>
               <div className="GrafiekGebruikLiftCol1Streep"></div>
               <h2 className="GrafiekGebruikLiftH2Text2">
-                67<h2 id="GrafiekGebruikLiftH2Text2Kleur">energieslurpers</h2>
+                0<h2 id="GrafiekGebruikLiftH2Text2Kleur">energieslurpers</h2>
                 gingen met de lift vandaag
               </h2>
             </Col>
