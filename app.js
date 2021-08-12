@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 const mongoose = require('mongoose');
 require('dotenv/config')
+
+
 app.use(express.static(path.join(__dirname, 'build')));
 
 //convert data to json
@@ -19,12 +21,16 @@ const liftRoute = require('./routes/liften');
 const liftHistoryRoute = require('./routes/liftHistory');
 
 //use routers
-app.use('/liften', liftRoute);
-app.use('/liftenhistory', liftHistoryRoute);
+app.use('/api/liften', liftRoute);
+app.use('/api/liftenhistory', liftHistoryRoute);
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+//react routing
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', function(req,res) {
+		res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
 
 connectDb();
 

@@ -1,7 +1,7 @@
 // files
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/index.css";
 
@@ -19,7 +19,7 @@ const App = () => {
           <FirebaseData />
         </Route>
         <Switch>
-          <Route exact path="/admin">
+          <Route path="/admin">
             <Admin />
           </Route>
         </Switch>
