@@ -13,7 +13,7 @@ class FirebaseData extends Component {
   constructor(props) {
     super(props);
     this.app = firebase.initializeApp(DB_CONFIG);
-    this.database = this.app.database().ref().child("leeg");
+    this.database = this.app.database().ref().child("Aantal_Lift_Gebruikers");
     this.state = {
       users: 0,
     };
@@ -36,7 +36,7 @@ class FirebaseData extends Component {
       datasets: [
         {
           label: "Vandaag",
-          data: [this.state.users, 67],
+          data: [67, this.state.users],
           backgroundColor: ["yellow", "red"],
           hoverOffset: 2,
         },
@@ -103,13 +103,14 @@ class FirebaseData extends Component {
           <Row className="GrafiekGebruikLiftRow">
             <Col className="GrafiekGebruikLiftCol1">
               <h2 className="GrafiekGebruikLiftH2Text1">
-                {this.state.users}
+                67
                 <h2 id="GrafiekGebruikLiftH2Text1Kleur"> helden </h2>gingen de
                 trap op vandaag
               </h2>
               <div className="GrafiekGebruikLiftCol1Streep"></div>
               <h2 className="GrafiekGebruikLiftH2Text2">
-                0<h2 id="GrafiekGebruikLiftH2Text2Kleur">energieslurpers</h2>
+                {this.state.users}
+                <h2 id="GrafiekGebruikLiftH2Text2Kleur">energieslurpers</h2>
                 gingen met de lift vandaag
               </h2>
             </Col>
