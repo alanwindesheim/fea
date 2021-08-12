@@ -16,6 +16,25 @@ body {
   color: yellow;
 }
 
+/* NavbarLift SLIDE 1 EN SLIDE 2 _________________________*/
+.NavbarLiftRow {
+  background-color: #441e59;
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.NavbarLifth1 {
+  font-weight: bold;
+  color: yellow;
+}
+.NavbarLifth3 {
+  font-weight: bold;
+}
+
 /* AantalGebruikLift ____________________________________*/
 .AantalGebruikLiftRow {
   margin-top: 1rem;
@@ -31,8 +50,10 @@ body {
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
-.AantalGebruikLiftImage1 {
+#AantalGebruikLiftImage1 {
   margin-bottom: 1rem;
+  height: 150px;
+  width: 150px;
 }
 
 .AantalGebruiktLifCol2 {
@@ -54,72 +75,61 @@ body {
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
-/* NavbarLift ___________________________________________*/
-.NavbarLiftRow {
-  background-color: #441e59;
-  text-align: center;
-  margin-top: 2rem;
-  padding: 0.5rem 0rem 0.5rem 0rem;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
-    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
-    0 16px 16px rgba(0, 0, 0, 0.12);
-}
-
-.NavbarLifth1 {
-  font-weight: bold;
-  color: yellow;
-}
-
-.NavbarLifth3 {
-  font-weight: bold;
-}
-
 /* GrafiekGebruikLift ____________________________________*/
 .GrafiekGebruikLiftRow {
   margin-top: 1rem;
 }
-
 .GrafiekGebruikLiftCol1 {
   padding: 1rem 1rem 1rem 1rem;
   background-color: #43256b;
   text-align: center;
+  border-left: 3px solid #4b0082;
+  border-right: 3px solid #4b0082;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.GrafiekGebruikLiftH2Text1 {
+  margin-top: 3rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+#GrafiekGebruikLiftH2Text1Kleur {
+  color: yellow;
+  font-weight: bold;
+}
+
+.GrafiekGebruikLiftCol1Streep {
+  border-bottom: 3px white solid;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.GrafiekGebruikLiftH2Text2 {
+  text-align: left;
+  font-weight: bold;
+  bottom: 0;
+}
+
+#GrafiekGebruikLiftH2Text2Kleur {
+  color: red;
+  font-weight: bold;
 }
 
 .GrafiekGebruikLiftCol2 {
   padding: 0.5rem 0.5rem 1rem 0.5rem;
-  background-color: #25133f;
+  background-color: #663988;
   text-align: center;
+  border-left: 3px solid #4b0082;
+  border-right: 3px solid #4b0082;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
-.sliderTitle {
-  font-weight: bold;
-}
-.sliderText {
-  color: yellow;
-  font-weight: bold;
-}
 
-.sliderTextWhite {
-  color: white;
-}
-
-.qrCodeImage {
-  width: 180px;
-  height: 180px;
-}
-
-.qrCodeTitle {
-  margin-bottom: 2rem;
-  color: yellow;
-  font-weight: bold;
-}
-
-/* Mobile Screen  ___________________________*/
+/* Mobile Screen Responsive , nog in proces en niet af momenteel _____*/
 @media only screen and (max-width: 591px) {
   .FireBaseDataH1 {
     font-size: 35px;
@@ -136,4 +146,388 @@ body {
   .AantalGebruiktLifCol3 {
     margin-left: 0rem;
   }
+
+  .navbarlefttop {
+    margin-top: 0rem;
+    text-align: left;
+    font-weight: bold;
+  }
 }
+
+/* _________________________________Admin__________________________________________________________ */
+.adminPage {
+  display: grid;
+  grid-template-columns: 1.1fr 2fr;
+  grid-auto-rows: minmax(100px, auto);
+  /* place-content: center; */
+  /* justify-items: stretch;
+  align-items: stretch; */
+}
+
+.box1 {
+  /* align-self: start; */
+  grid-column: 1;
+  grid-row: 1/4;
+  background-color: #321658;
+}
+
+.box2 {
+  /* align-self: end; */
+  grid-column: 2/3;
+  grid-row: 1/4;
+  background-color: #ede1ff;
+}
+
+.box3 {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #1f1035;
+  height: 76.5vh;
+  margin-left: 5em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.box4 {
+  grid-column: 2/3;
+  grid-row: 2;
+  background-color: #d9bfff;
+  height: 76.5vh;
+  margin-right: 5em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.AdminH1 {
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 0.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: rgb(255, 255, 110);
+}
+
+.AdminImage {
+  display: block;
+  margin: auto;
+}
+
+.AdminH2 {
+  text-align: center;
+  margin-top: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form {
+  margin-top: 1em;
+}
+
+.formH1 {
+  text-align: center;
+  margin-top: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #4a0c6b;
+}
+
+.formH4 {
+  text-align: center;
+}
+
+.inputName {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40%;
+  height: 45px;
+  margin-bottom: 1em;
+  border: 1px rgb(219, 219, 219) solid;
+  background-color: rgb(243, 243, 243);
+  border-radius: 5px;
+}
+
+.inputPassword {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 40%;
+  height: 45px;
+  margin-bottom: 2em;
+  border: 1px rgb(219, 219, 219) solid;
+  background-color: rgb(243, 243, 243);
+  border-radius: 5px;
+}
+
+.formButton {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 40%;
+  height: 60px;
+  background-color: #25133f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.formButton:hover {
+  background-color: #3c1b6e;
+}
+
+/* ___________________________LiftKiezenPage______________________________ */
+.liftPage {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.boxlift1 {
+  /* align-self: start; */
+  grid-column: 1;
+  grid-row: 1/4;
+  background-color: #321658;
+}
+
+.boxlift2 {
+  /* align-self: end; */
+  grid-column: 2/3;
+  grid-row: 1/4;
+  background-color: #ede1ff;
+}
+
+.boxlift3 {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: #1f1035;
+  height: 76.5vh;
+  margin-left: 5em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.boxlift4 {
+  grid-column: 2/3;
+  grid-row: 2;
+  background-color: #d9bfff;
+  height: 76.5vh;
+  margin-right: 5em;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.boxlift3div1 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.boxlift3h1 {
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-left: 0.5em;
+}
+
+.boxlift3image {
+  display: inline;
+  height: 30px;
+}
+
+.boxlift3div2 {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.boxlift3div3 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.boxlift3div4 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.boxlift3div5 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.boxlift3div6 {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.boxlift3button {
+  border: none;
+  width: 100%;
+  letter-spacing: 3px;
+}
+
+.boxlift3buttonimage {
+  height: 100px;
+  width: 100px;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.boxlift3buttonloguit {
+  background-color: rgb(255, 116, 116);
+  border: none;
+  width: 100%;
+  letter-spacing: 3px;
+}
+
+.boxlift4h1 {
+  font-weight: bold;
+  margin-top: 1em;
+  font-size: 25px;
+  color: #1f1035;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.boxlift4div2 {
+  width: 100%;
+  height: 73.5vh;
+  border: none;
+  border: none;
+}
+
+.MuiDataGrid-root {
+  border: none !important;
+  padding-left: 0.1em !important;
+  padding-right: 0.1em !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell {
+  border-bottom: 2px solid #8c5dd3 !important;
+  font-weight: bold;
+}
+
+.MuiDataGrid-root .MuiDataGrid-columnsContainer {
+  border-bottom: 1px solid white !important;
+  background-color: #8c5dd3;
+  color: white;
+  font-weight: bold !important;
+  text-transform: uppercase;
+}
+
+/* _________________________liftkiezen____________________ */
+.kiezenPage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 3em;
+  margin-left: 10em;
+  margin-right: 10em;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.kiezenbox1 {
+  /* align-self: start; */
+  grid-column: 1/4;
+  grid-row: 1;
+}
+
+.kiezenbox1h1 {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1f1035;
+  border-bottom: 3px solid #4b0082;
+}
+
+.kiezenbox1h3 {
+  text-align: center;
+  margin-top: 1em;
+  color: #4d11a8;
+  font-weight: bold;
+}
+
+.kiezenbox1button {
+  border: none;
+  background-color: #1f1035;
+  color: white;
+  font-weight: bold;
+}
+
+.kiezenbox2 {
+  /* align-self: start; */
+  grid-column: 1/4;
+  grid-row: 2/5;
+  display: grid;
+  grid-template-columns: repeat(1fr 1fr 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-auto-columns: minmax(25%, auto);
+  gap: 1em 2em;
+  text-align: center;
+}
+
+.kiezenbox2div1 {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #25133f;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.kiezenbox2div2 {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: #43256b;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.kiezenbox2div3 {
+  grid-column: 3;
+  grid-row: 1;
+  background-color: #663988;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.kiezenbox2h1 {
+  margin-top: 0.3em;
+  font-size: 70px;
+  color: rgb(255, 255, 110);
+}
+
+.kiezenbox2h3 {
+  margin-top: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.kiezenbox3 {
+  grid-column: 1/4;
+  grid-row: 5/11;
+  margin-top: 3em;
+}
+.kiezenbox3h3 {
+  text-align: center;
+  font-weight: bold;
+  color: #4d11a8;
+}
+.kiezenbox4 {
+  grid-column: 1/4;
+  grid-row: 12/17;
+  /* margin-top: 1em; */
+  margin-bottom: 1em;
+  display: grid;
+  grid-template-columns: repeat(1fr 1fr 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 1em 2em;
+  /* margin-top: 1em; */
+}
+
+.kiezenbox4div1 {
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #d7bdff;
+}
+
+/* .kiezenbox4div2 {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: rgb(153, 26, 26);
+} */

@@ -1,20 +1,19 @@
 import React, { Component } from "react";
 import firebase from "firebase";
 import { DB_CONFIG } from "../config/FirebaseConfig";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import { Doughnut } from "react-chartjs-2";
 import elevator from "../images/elevator.png";
 import co2 from "../images/co22.png";
-import burger from "../images/burger.png";
-import qr from "../images/qr.png";
-import { Bar } from "react-chartjs-2";
+import charger from "../images/charge.png";
 
 class FirebaseData extends Component {
   constructor(props) {
     super(props);
-
     this.app = firebase.initializeApp(DB_CONFIG);
     this.database = this.app.database().ref().child("Aantal_Lift_Gebruikers");
-
     this.state = {
       users: 0,
     };
@@ -29,38 +28,45 @@ class FirebaseData extends Component {
   }
 
   render() {
-    var g = (this.state.users * 0.09).toFixed(2);
-    var value = parseFloat(g).toFixed(2);
+    var liftEnergie = (this.state.users * 0.09).toFixed(2);
+    var value = parseFloat(liftEnergie).toFixed(2);
 
     const data = {
-      labels: ["23 Mei", "24 Mei", "25 Mei", "26 Mei", "Vandaag"],
+      labels: ["Trapgebruikers", "Liftgebruikers"],
       datasets: [
         {
-          label: "Liftgebruikers",
-          data: [90, 87, 80, 75, this.state.users],
-          borderColor: ["rgba(255,0,255)"],
-          backgroundColor: ["rgba(255,0,255)"],
-          color: ["rgba(255,0,255)"],
-          pointBackgroundColor: "rgba(255,0,255)",
-          pointBorderColor: "rgba(255,0,255)",
-        },
-        {
-          label: "Trapgebruikers",
-          data: [76, 83, 87, 90, this.state.users * 2],
-          borderColor: ["rgba(255,255,0)"],
-          backgroundColor: ["rgba(255,255,0)"],
-          pointBackgroundColor: "rgba(255,255,0)",
-          pointBorderColor: "rgba(255,255,0)",
+          label: "Vandaag",
+          data: [67, this.state.users],
+          backgroundColor: ["yellow", "red"],
+          hoverOffset: 2,
         },
       ],
     };
+
     return (
-      <div>
+      <Carousel
+        showArrows={false}
+        showIndicators={false}
+        showStatus={false}
+        autoPlay
+        infiniteLoop={true}
+        stopOnHover={false}
+        interval={8000}
+      >
         <Container>
+          <Row className="NavbarLiftRow">
+            <Col>
+              <h1 className="NavbarLifth1">LIFTGEBRUIK</h1>
+              <h3 className="NavbarLifth3">
+                Vaker de trap nemen is al een begin voor een beter toekomst van
+                de aarde
+              </h3>
+            </Col>
+          </Row>
           <Row className="AantalGebruikLiftRow">
             <Col className="AantalGebruiktLifCol1">
               <h1 className="FireBaseDataH1">{this.state.users} </h1>
-              <img src={elevator} className="AantalGebruikLiftImage1" alt="" />
+              <img src={elevator} id="AantalGebruikLiftImage1" alt="" />
               <h2 className="AantalGebruiktH2">
                 {" "}
                 keer is de lift aan het werk gezet vandaag
@@ -68,33 +74,59 @@ class FirebaseData extends Component {
             </Col>
             <Col className="AantalGebruiktLifCol2">
               <h1 className="FireBaseDataH1">{value}</h1>
-              <img src={co2} className="AantalGebruikLiftImage1" alt="" />
-              <h2>zoveel kilo CO2 uitstoot is er vandaag door de lift</h2>
+              <img src={co2} id="AantalGebruikLiftImage1" alt="" />
+              <h2 className="AantalGebruiktH2">
+                zoveel kilo CO2 uitstoot is er vandaag door de lift
+              </h2>
             </Col>
             <Col className="AantalGebruiktLifCol3">
               <h1 className="FireBaseDataH1">
-                {this.state.users * 0.02 * 1.25}
+                {Math.round((this.state.users * 0.02) / 0.18).toFixed(0)}
               </h1>
-              <img src={burger} className="AantalGebruikLiftImage1" alt="" />
+              <img src={charger} id="AantalGebruikLiftImage1" alt="" />
               <h2 className="AantalGebruiktH2">
-                Zoveel hamburgers kon er gehaald worden met de kosten van de
-                lift
+                zoveel mobiele telefoons konden er opgeladen worden
               </h2>
+            </Col>
+          </Row>
+        </Container>
+
+        <Container>
+          <Row className="NavbarLiftRow">
+            <Col>
+              <h1 className="NavbarLifth1">
+                IK KIES VOOR DUURZAAMHEID EN JIJ?
+              </h1>
+              <h3 className="NavbarLifth3">De statistieken van vandaag</h3>
             </Col>
           </Row>
           <Row className="GrafiekGebruikLiftRow">
             <Col className="GrafiekGebruikLiftCol1">
-              <Bar data={data} />
+              <h2 className="GrafiekGebruikLiftH2Text1">
+                67
+                <h2 id="GrafiekGebruikLiftH2Text1Kleur"> helden </h2>gingen de
+                trap op vandaag
+              </h2>
+              <div className="GrafiekGebruikLiftCol1Streep"></div>
+              <h2 className="GrafiekGebruikLiftH2Text2">
+                {this.state.users}
+                <h2 id="GrafiekGebruikLiftH2Text2Kleur">energieslurpers</h2>
+                gingen met de lift vandaag
+              </h2>
             </Col>
             <Col className="GrafiekGebruikLiftCol2">
-              <h4 className="qrCodeTitle">
-                Scan {"&"} Check hoe dit project is gemaakt{" "}
-              </h4>
-              <Image src={qr} className="qrCodeImage" fluid />
+              <Doughnut
+                height={500}
+                width={450}
+                data={data}
+                options={{
+                  maintainAspectRatio: false,
+                }}
+              />
             </Col>
           </Row>
         </Container>
-      </div>
+      </Carousel>
     );
   }
 }
