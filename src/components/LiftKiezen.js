@@ -1,26 +1,66 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import elevator from "../images/elevator2.png";
 import { DataGrid } from "@material-ui/data-grid";
 
 const columns = [
-  { field: "id", headerName: "Liftnaam", width: 150 },
+  { field: "id", headerName: "Id", width: 150 },
   {
-    field: "lastName",
+    field: "liftnaam",
+    headerName: "Naam",
+    width: 150,
+    editable: true,
+  },{
+    field: "liftid",
+    headerName: "id",
+    width: 150,
+    editable: true,
+  },
+  {
+    field: "locatie",
     headerName: "Locatie",
     width: 150,
     editable: true,
   },
   {
-    field: "age",
+    field: "status",
     headerName: "Status",
     width: 150,
     editable: true,
   },
 ];
 
+
+
+var newie =[];
+var newiee = [];
+
+  const getData = async () => {
+    const data = [];
+    
+    const f1_data = await fetch("http://localhost:8080/api/liften")
+      .then((res) => res.json());
+    newie.push(f1_data);
+
+    newie[0].forEach((p) => newiee.push({
+      id: p._id,
+      liftnaam: p.liftnaam,
+      locatie: p.liftlocatie
+    }))
+    
+
+    console.log(newie[0][1].liftnaam);
+    console.log(newiee);
+    console.log(newie);
+  };
+  
+  getData();
+
+
+  
+
 const rows = [
-  { id: "Lift 1", lastName: "Windesheim", age: "Actief" },
+  { id: "Lift 1", liftnaam: "Windesheim", sr: "Actief" },
   { id: "Lift 2", lastName: "Parkeergarage", age: "Niet Actief" },
   { id: "Lift 3", lastName: "Treinstation", age: "Niet Actief" },
   { id: "Lift 4", lastName: "Bibliotheek", age: "Niet Actief" },
@@ -28,6 +68,8 @@ const rows = [
   { id: "Lift 6", lastName: "Ziekenhuis", age: "Niet Actief" },
   { id: "Lift 7", lastName: "Flat", age: "Niet Actief" },
 ];
+
+console.log(rows);
 
 const LiftKiezen = () => {
   return (

@@ -7,7 +7,6 @@ router.get('/', async function (req, res) {
     try{
         const liften = await Liften.find();
         res.json(liften)
-        console.log(liften)
     } catch(err){
         res.status(500).json({ message: err}); 
     }
