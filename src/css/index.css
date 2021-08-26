@@ -531,3 +531,10 @@ body {
   grid-row: 1;
   background-color: rgb(153, 26, 26);
 } */
+
+.percs{
+  font-size: 15px !important;
+  position:absolute;
+  margin-top: 0.8%;
+  font-weight: bold;
+}

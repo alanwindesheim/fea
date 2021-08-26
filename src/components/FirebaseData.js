@@ -13,7 +13,7 @@ class FirebaseData extends Component {
   constructor(props) {
     super(props);
     this.app = firebase.initializeApp(DB_CONFIG);
-    this.database = this.app.database().ref().child("Aantal_Lift_Gebruikers");
+    this.database = this.app.database().ref().child("Aantal_Lift_Gebruikers/Aantal_Lift_Gebruikers");
     this.state = {
       users: 0,
     };
@@ -76,12 +76,12 @@ class FirebaseData extends Component {
               <h1 className="FireBaseDataH1">{value}</h1>
               <img src={co2} id="AantalGebruikLiftImage1" alt="" />
               <h2 className="AantalGebruiktH2">
-                zoveel kilo CO2 uitstoot is er vandaag door de lift
+                zoveel kilo CO2 uitstoot is er vandaag door de lifts
               </h2>
             </Col>
             <Col className="AantalGebruiktLifCol3">
               <h1 className="FireBaseDataH1">
-                {Math.round((this.state.users * 0.02) / 0.18).toFixed(0)}
+                {Math.round((this.state.users * 0.02) / 0.18).toFixed(0)} 
               </h1>
               <img src={charger} id="AantalGebruikLiftImage1" alt="" />
               <h2 className="AantalGebruiktH2">
@@ -122,6 +122,8 @@ class FirebaseData extends Component {
                 options={{
                   maintainAspectRatio: false,
                 }}
+                
+                
               />
             </Col>
           </Row>

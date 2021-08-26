@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Liften = require('../models/Lift');
+const db= 'tes';
 
 // get all lifts
 router.get('/', async function (req, res) {
@@ -11,12 +12,12 @@ router.get('/', async function (req, res) {
         res.status(500).json({ message: err}); 
     }
    });
-
+    
 
  // get specific lift
-router.get('/:liftid', async(req, res) =>{
+router.get('/:id', async(req, res) =>{
     try{
-        const lift = await Liften.findOne({'liftid': req.params.liftid});
+        const lift = await Liften.findOne({'id': req.params.id});
         res.json(lift);
     }catch(err){
         res.status(500).json({ message: err}); 
