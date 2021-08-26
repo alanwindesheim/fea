@@ -13,9 +13,17 @@ class FirebaseData extends Component {
   constructor(props) {
     super(props);
     this.app = firebase.initializeApp(DB_CONFIG);
-    this.database = this.app.database().ref().child("Aantal_Lift_Gebruikers");
+    this.database = this.app
+      .database()
+      .ref()
+      .child("Aantal_Lift_Gebruikers/Aantal_Lift_Gebruikers");
+    this.database2 = this.app
+      .database()
+      .ref()
+      .child("Aantal_Trap_Gebruikers/Aantal_Trap_Gebruikers");
     this.state = {
       users: 0,
+      trap: 0,
     };
   }
 
@@ -23,6 +31,11 @@ class FirebaseData extends Component {
     this.database.on("value", (snap) => {
       this.setState({
         users: snap.val(),
+      });
+    });
+    this.database2.on("value", (snap) => {
+      this.setState({
+        trap: snap.val(),
       });
     });
   }
@@ -36,8 +49,8 @@ class FirebaseData extends Component {
       datasets: [
         {
           label: "Vandaag",
-          data: [67, this.state.users],
-          backgroundColor: ["yellow", "red"],
+          data: [this.state.trap, this.state.users],
+          backgroundColor: ["#DDA0DD", "#FF00FF"],
           hoverOffset: 2,
         },
       ],
@@ -103,7 +116,7 @@ class FirebaseData extends Component {
           <Row className="GrafiekGebruikLiftRow">
             <Col className="GrafiekGebruikLiftCol1">
               <h2 className="GrafiekGebruikLiftH2Text1">
-                67
+                {this.state.trap}
                 <h2 id="GrafiekGebruikLiftH2Text1Kleur"> helden </h2>gingen de
                 trap op vandaag
               </h2>

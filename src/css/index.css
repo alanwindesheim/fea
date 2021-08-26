@@ -552,6 +552,16 @@ body {
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
 
+#GrafiekGebruikLiftH2Text1KleurHogeschool {
+  color: #5676bb;
+  font-weight: bold;
+}
+
+#GrafiekGebruikLiftH2Text2KleurHogeschool {
+  color: #000000;
+  font-weight: bold;
+}
+
 .AantalGebruiktLifCol2Hogeschool {
   padding: 1rem 0rem 1rem 0rem;
   background-color: #283be2;
@@ -652,6 +662,15 @@ body {
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 16px 16px rgba(0, 0, 0, 0.12);
 }
+#GrafiekGebruikLiftH2Text1KleurFitness {
+  font-weight: bold;
+  color: red;
+}
+
+#GrafiekGebruikLiftH2Text2KleurFitness {
+  font-weight: bold;
+  color: rgb(12, 2, 2);
+}
 
 .NavbarLiftRowBieb {
   background-color: #164403;
@@ -712,4 +731,14 @@ body {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
     0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
     0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+#GrafiekGebruikLiftH2Text1KleurBieb {
+  color: #73ff7a;
+  font-weight: bold;
+}
+
+#GrafiekGebruikLiftH2Text2KleurBieb {
+  color: #093f0c;
+  font-weight: bold;
 }

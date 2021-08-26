@@ -14,9 +14,17 @@ class Fitness extends Component {
   constructor(props) {
     super(props);
     this.app = firebase.initializeApp(DB_CONFIG);
-    this.database = this.app.database().ref().child("Aantal_Lift_Gebruikers");
+    this.database = this.app
+      .database()
+      .ref()
+      .child("Aantal_Lift_Gebruikers/Aantal_Lift_Gebruikers");
+    this.database2 = this.app
+      .database()
+      .ref()
+      .child("Aantal_Trap_Gebruikers/Aantal_Trap_Gebruikers");
     this.state = {
       users: 0,
+      trap: 0,
     };
   }
 
@@ -24,6 +32,11 @@ class Fitness extends Component {
     this.database.on("value", (snap) => {
       this.setState({
         users: snap.val(),
+      });
+    });
+    this.database2.on("value", (snap) => {
+      this.setState({
+        trap: snap.val(),
       });
     });
   }
@@ -37,8 +50,8 @@ class Fitness extends Component {
       datasets: [
         {
           label: "Vandaag",
-          data: [67, this.state.users],
-          backgroundColor: ["yellow", "red"],
+          data: [this.state.trap, this.state.users],
+          backgroundColor: ["#ff9999", "#ff0000"],
           hoverOffset: 2,
         },
       ],
@@ -111,14 +124,16 @@ class Fitness extends Component {
           <Row className="GrafiekGebruikLiftRow">
             <Col className="GrafiekGebruikLiftCol1Fitness">
               <h2 className="GrafiekGebruikLiftH2Text1">
-                67
-                <h2 id="GrafiekGebruikLiftH2Text1Kleur"> helden </h2>gingen de
-                trap op vandaag
+                {this.state.trap}
+                <h2 id="GrafiekGebruikLiftH2Text1KleurFitness"> helden </h2>
+                gingen de trap op vandaag
               </h2>
               <div className="GrafiekGebruikLiftCol1Streep"></div>
               <h2 className="GrafiekGebruikLiftH2Text2">
                 {this.state.users}
-                <h2 id="GrafiekGebruikLiftH2Text2Kleur">energieslurpers</h2>
+                <h2 id="GrafiekGebruikLiftH2Text2KleurFitness">
+                  energieslurpers
+                </h2>
                 gingen met de lift vandaag
               </h2>
             </Col>

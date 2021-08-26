@@ -14,9 +14,17 @@ class Hogeschool extends Component {
   constructor(props) {
     super(props);
     this.app = firebase.initializeApp(DB_CONFIG);
-    this.database = this.app.database().ref().child("Aantal_Lift_Gebruikers");
+    this.database = this.app
+      .database()
+      .ref()
+      .child("Aantal_Lift_Gebruikers/Aantal_Lift_Gebruikers");
+    this.database2 = this.app
+      .database()
+      .ref()
+      .child("Aantal_Trap_Gebruikers/Aantal_Trap_Gebruikers");
     this.state = {
       users: 0,
+      trap: 0,
     };
   }
 
@@ -24,6 +32,11 @@ class Hogeschool extends Component {
     this.database.on("value", (snap) => {
       this.setState({
         users: snap.val(),
+      });
+    });
+    this.database2.on("value", (snap) => {
+      this.setState({
+        trap: snap.val(),
       });
     });
   }
@@ -37,8 +50,8 @@ class Hogeschool extends Component {
       datasets: [
         {
           label: "Vandaag",
-          data: [67, this.state.users],
-          backgroundColor: ["yellow", "red"],
+          data: [this.state.trap, this.state.users],
+          backgroundColor: ["#7FFFD4", "#00008B"],
           hoverOffset: 2,
         },
       ],
@@ -55,7 +68,7 @@ class Hogeschool extends Component {
         interval={8000}
       >
         <Container>
-          <Helmet bodyAttributes={{ style: "background-color : #FFF" }} />
+          <Helmet bodyAttributes={{ style: "background-color : #00CED1" }} />
           <Row className="NavbarLiftRowHogeschool">
             <Col>
               <h1 className="NavbarLifth1" style={{ color: "#ffcd19" }}>
@@ -111,14 +124,16 @@ class Hogeschool extends Component {
           <Row className="GrafiekGebruikLiftRow">
             <Col className="GrafiekGebruikLiftCol1Hogeschool">
               <h2 className="GrafiekGebruikLiftH2Text1">
-                67
-                <h2 id="GrafiekGebruikLiftH2Text1Kleur"> helden </h2>gingen de
-                trap op vandaag
+                {this.state.trap}
+                <h2 id="GrafiekGebruikLiftH2Text1KleurHogeschool"> helden </h2>
+                gingen de trap op vandaag
               </h2>
               <div className="GrafiekGebruikLiftCol1Streep"></div>
               <h2 className="GrafiekGebruikLiftH2Text2">
                 {this.state.users}
-                <h2 id="GrafiekGebruikLiftH2Text2Kleur">energieslurpers</h2>
+                <h2 id="GrafiekGebruikLiftH2Text2KleurHogeschool">
+                  energieslurpers
+                </h2>
                 gingen met de lift vandaag
               </h2>
             </Col>
