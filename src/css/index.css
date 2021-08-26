@@ -538,3 +538,184 @@ body {
   margin-top: 0.8%;
   font-weight: bold;
 }
+.NavbarLiftRowHogeschool {
+  background-color: #000ba1;
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol1Hogeschool {
+  padding: 1rem 0rem 1rem 0rem;
+  margin-right: 1rem;
+  background-color: #081950;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol2Hogeschool {
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: #283be2;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol3Hogeschool {
+  padding: 1rem 0rem 1rem 0rem;
+  margin-left: 1rem;
+  background-color: #1034a6;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.GrafiekGebruikLiftCol1Hogeschool {
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #283be2;
+  text-align: center;
+  border-left: 3px solid #1034a6;
+  border-right: 3px solid #1034a6;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.GrafiekGebruikLiftCol2Hogeschool {
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  background-color: #1034a6;
+  text-align: center;
+  border-right: 3px solid #283be2;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.NavbarLiftRowFitness {
+  background-color: #9b1206;
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol1Fitness {
+  padding: 1rem 0rem 1rem 0rem;
+  margin-right: 1rem;
+  background-color: #4e0700;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol2Fitness {
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: #9b1306;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol3Fitness {
+  padding: 1rem 0rem 1rem 0rem;
+  margin-left: 1rem;
+  background-color: #ca2111;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.GrafiekGebruikLiftCol1Fitness {
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #9b1306;
+  text-align: center;
+  border-bottom: 3px solid #ca2111;
+  border-right: 3px solid #ca2111;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.GrafiekGebruikLiftCol2Fitness {
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  background-color: #ca2111;
+  text-align: center;
+  border-bottom: 3px solid #9b1306;
+  border-right: 3px solid #9b1306;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.NavbarLiftRowBieb {
+  background-color: #164403;
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol1Bieb {
+  padding: 1rem 0rem 1rem 0rem;
+  margin-right: 1rem;
+  background-color: #072a0f;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol2Bieb {
+  padding: 1rem 0rem 1rem 0rem;
+  background-color: #017507;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.AantalGebruiktLifCol3Bieb {
+  padding: 1rem 0rem 1rem 0rem;
+  margin-left: 1rem;
+  background-color: #2dc019;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.GrafiekGebruikLiftCol1Bieb {
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #017507;
+  text-align: center;
+  border-bottom: 3px solid #2dc019;
+  border-right: 3px solid #2dc019;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+.GrafiekGebruikLiftCol2Bieb {
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  background-color: #2dc019;
+  text-align: center;
+  border-bottom: 3px solid #017507;
+  border-right: 3px solid #017507;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}

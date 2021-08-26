@@ -21,6 +21,7 @@
     "moment": "^2.29.1",
     "mongodb": "^4.1.0",
     "mongoose": "^5.13.5",
+    "node": "^16.6.1",
     "nodemon": "^2.0.12",
     "react": "^17.0.2",
     "react-admin": "^3.17.1",
