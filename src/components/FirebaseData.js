@@ -89,7 +89,7 @@ class FirebaseData extends Component {
               <h1 className="FireBaseDataH1">{value}</h1>
               <img src={co2} id="AantalGebruikLiftImage1" alt="" />
               <h2 className="AantalGebruiktH2">
-                zoveel kilo CO2 uitstoot is er vandaag door de lift
+                zoveel kilo CO2 uitstoot is er vandaag door de lifts
               </h2>
             </Col>
             <Col className="AantalGebruiktLifCol3">

@@ -21,5 +21,14 @@ router.get('/:liftid', async(req, res) =>{
     }
 })
 
+router.get('/pastweek/:id', async(req, res) =>{
+    try{
+        const result = await LiftenHistory.find({'liftid': req.params.id, "date": {$gte: new Date((new Date().getTime() - (15 * 24 * 60 * 60 * 2000)))}}).sort({ "date": -1 });
+        res.json(result);
+    }catch(err){
+        res.status(500).json({ message: err}); 
+    }
+})
+
 module.exports = router;
    

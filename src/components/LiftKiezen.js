@@ -1,23 +1,33 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Helmet } from "react-helmet";
 import elevator from "../images/elevator2.png";
 import { DataGrid } from "@material-ui/data-grid";
+import { Link } from 'react-router-dom';
 
+
+function App(){
+  
+
+
+
+
+const [data, setData] = useState([])
 const columns = [
-  { field: "id", headerName: "Id", width: 150 },
+  { field: "id", headerName: "Id", width: 150, hide: true },
   {
     field: "liftnaam",
     headerName: "Naam",
-    width: 150,
+    width: 250,
     editable: true,
   },{
     field: "liftid",
     headerName: "id",
-    width: 150,
+    width: 200,
     editable: true,
+    hide: true
   },
   {
-    field: "locatie",
+    field: "liftlocatie",
     headerName: "Locatie",
     width: 150,
     editable: true,
@@ -30,33 +40,32 @@ const columns = [
   },
 ];
 
+useEffect(() => {
+  fetch("http://localhost:8080/api/liften")
+  .then((res) => res.json())
+  .then(res=>{ 
+    console.log(res)
+    setData(res)});
+}, [])
 
 
-var newie =[];
-var newiee = [];
+    // fetch("http://localhost:8080/api/liften")
+    //   .then((res) => res.json());
+    // newie.push(liftdata);
 
-  const getData = async () => {
-    const data = [];
+    // newie[0].forEach((p) => newiee.push({
+    //   id: p._id,
+    //   liftnaam: p.liftnaam,
+    //   locatie: p.liftlocatie
+    // }))
     
-    const f1_data = await fetch("http://localhost:8080/api/liften")
-      .then((res) => res.json());
-    newie.push(f1_data);
+    // newiee = JSON.parse(JSON.stringify(newiee));
 
-    newie[0].forEach((p) => newiee.push({
-      id: p._id,
-      liftnaam: p.liftnaam,
-      locatie: p.liftlocatie
-    }))
+ 
     
-
-    console.log(newie[0][1].liftnaam);
-    console.log(newiee);
-    console.log(newie);
-  };
-  
-  getData();
-
-
+    
+   
+ 
   
 
 const rows = [
@@ -69,9 +78,23 @@ const rows = [
   { id: "Lift 7", lastName: "Flat", age: "Niet Actief" },
 ];
 
-console.log(rows);
 
-const LiftKiezen = () => {
+const [selectionModel, setSelectionModel] = React.useState([]);
+const buttonRef = useRef();
+
+const disableButton = () =>{
+  buttonRef.current.disabled = true; // this disables the button
+ }
+
+useEffect(() => {
+  console.log(selectionModel);
+  console.log('yes');
+ 
+  var button = document.getElementsByClassName("boxlift3button");
+  button.disabled = true;
+
+}, [selectionModel])
+
   return (
     <section>
       <Helmet bodyAttributes={{ style: "background-color : #ede1ff" }} />
@@ -84,46 +107,44 @@ const LiftKiezen = () => {
             <h1 className="boxlift3h1">Liftgebruik</h1>
           </div>
           <div className="boxlift3div2">
-            <button disabled className="boxlift3button">
+          <Link to={{pathname:`/liftPagina/${selectionModel}`, 
+                state: {liftid: 'idjfsd'} 
+                }}
+                >
+            <button ref={buttonRef} className="boxlift3button">
               <h4>BEKIJKEN</h4>
             </button>
+            </Link>
           </div>
-          <div className="boxlift3div3">
-            <button disabled className="boxlift3button">
-              <h4>BEWERKEN</h4>
-            </button>
-          </div>
-          <div className="boxlift3div4">
-            <button disabled className="boxlift3button">
-              <h4>VERWIJDEREN</h4>
-            </button>
-          </div>
-          <div className="boxlift3div5">
-            <button className="boxlift3button">
-              <h4>TOEVOEGEN</h4>
-            </button>
-          </div>
-          <div className="boxlift3div6">
+
+          {/* <div className="boxlift3div6">
+          
             <button className="boxlift3buttonloguit">
               <h4>UITLOGGEN</h4>
             </button>
-          </div>
+           
+          </div> */}
         </div>
         <div className="boxlift4">
           <div>{/* <h1 className="boxlift4h1">liften beheren</h1> */}</div>
           <div className="boxlift4div2">
             <DataGrid
-              rows={rows}
+              rows={data}
               columns={columns}
               pageSize={9}
-              checkboxSelection
-              disableSelectionOnClick
+              NoRowsOverlay
+              onSelectionModelChange={(rows) => setSelectionModel(rows)}
+              
+             
             />
+            
+
+           
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+    }
 
-export default LiftKiezen;
+export default App;

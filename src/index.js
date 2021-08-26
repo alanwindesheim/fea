@@ -32,7 +32,7 @@ const App = () => {
           </Route>
         </Switch>
         <Switch>
-          <Route exact path="/liftpagina">
+          <Route exact path="/liftpagina/:id">
             <LiftPagina />
           </Route>
         </Switch>

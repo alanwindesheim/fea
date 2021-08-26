@@ -1,5 +1,11 @@
 const mongoose = require('mongoose');
 
+const opts = { toJSON: { virtuals: true } };
+
+
+
+
+
 const liftHistorySchema = mongoose.Schema({
     id: {
         type: Number,
@@ -20,10 +26,14 @@ const liftHistorySchema = mongoose.Schema({
     co2: {
         type: Number,
         required: true
+    },
+    date:{
+        type: Date,
+
     }
     
 
 
-})
+}, opts)
 
 module.exports = mongoose.model('liftHistory', liftHistorySchema);
